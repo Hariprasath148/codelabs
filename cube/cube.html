@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cube</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            min-width: 150vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-y: hidden;
+            background-color: black;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 55px; 
+        }
+         
+        .cube {
+            width: 100px;
+            height: 100px;
+            transform-style: preserve-3d;
+            position: relative;
+            perspective: 200px;
+            transform: rotate3d(0, 1, 0, 0deg) scale3d(1,1,10); 
+            animation: side 3s ease both;
+            animation-timeline: view(x);
+            background-color: rgb(255, 89, 0);
+        }
+
+        .cube:nth-child(odd) {
+            margin-bottom: 100px;
+            perspective-origin: center 100px;
+        }
+
+        .cube:nth-child(even) {
+            margin-top: 100px;
+            perspective-origin: center -75px;
+        }
+
+        @keyframes side {
+            0% {
+                transform: rotate3d(0, 1, 0, 15deg) scale3d(1,1,10); 
+            }
+            45% {
+                transform: rotate3d(0, 1, 0, 0deg) scale3d(1,1,10); 
+            }
+            55% {
+                transform: rotate3d(0, 1, 0, 0deg) scale3d(1,1,10); 
+            }
+            100% {
+                transform: rotate3d(0, 1, 0, -15deg) scale3d(1,1,10); 
+            }
+        }
+        
+        .side {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgb(0 180 255 / 61%);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        #front {
+            transform: translateZ(-10px);
+            background-color: rgb(255, 0, 0);
+        }
+
+        #back {
+            transform: translateZ(100px);
+            background-color: orange;
+        }
+        #left {
+            transform-origin: right;
+            transform: rotateY(90deg);
+        }
+        #right {
+            transform-origin: left;
+            transform: rotateY(-90deg);
+        }
+        #top {
+            transform-origin: top;
+            transform:rotateX(90deg);
+        }
+        #bottom {
+            transform-origin: bottom;
+            transform:rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+        <div class="cube">
+            <!-- <div class="side" id="front"></div> -->
+            <div class="side" id="back"></div>
+            <div class="side" id="left"></div>
+            <div class="side" id="right"></div>
+            <div class="side" id="top"></div>
+            <div class="side" id="bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
