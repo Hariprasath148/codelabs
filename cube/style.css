@@ -1,0 +1,354 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gradient : linear-gradient(90deg, rgba(255,255,255,0.4010854341736695) 0%, rgba(255,255,255,0.3) 33%, rgba(255,255,255,0.2) 67%, rgba(255,255,255,0) 100%);
+    --gradient-shadow : rgba(255, 255, 255, 0.43);
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    background-color: black;
+    margin-left: 15vw;
+}
+
+body.red {
+    --gradient : linear-gradient(90deg, rgba(255, 0, 0, 0.4) 0%, rgba(255, 0, 0, 0.2) 40%, rgba(255, 0, 0, 0) 72%, rgba(255, 0, 0, 0) 100%);
+    --gradient-shadow: rgba(255, 0, 0, 1);
+}
+
+body.skyblue {
+    --gradient : linear-gradient(90deg, rgba(0,255,239,0.6) 0%, rgba(0,255,239,0.4) 40%, rgba(0,255,239,0.2) 72%, rgba(0,255,239,0) 100%);
+    --gradient-shadow : rgba(0,255,239,1);
+}
+
+body.purple {
+    --gradient : linear-gradient(90deg, rgba(160,32,240,0.6) 0%, rgba(160,32,240,0.4) 40%, rgba(160,32,240,0.2) 72%, rgba(160,32,240,0) 100%);;
+    --gradient-shadow : rgba(160,32,240,1);
+}
+
+body.pink {
+    --gradient : linear-gradient(90deg, rgba(255,15,123,0.6) 0%, rgba(255,15,123,0.4) 40%, rgba(255,15,123,0.2) 72%, rgba(255,15,123,0) 100%);
+    --gradient-shadow : rgba(255,15,123,1);
+}
+
+body.green {
+    --gradient : linear-gradient(90deg, rgba(57,255,20,0.6) 0%, rgba(57,255,20,0.4) 40%, rgba(57,255,20,0.2) 72%, rgba(57,255,20,0) 100%);
+    --gradient-shadow : rgba(57,255,20,1);
+}
+
+#color_change_container {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    gap: 10px;
+}
+
+.colors {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid white;
+}
+
+.colors:nth-child(1) {
+    background-color: rgba(255,255,255,0.4010854341736695);
+}
+
+.colors:nth-child(2) {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.colors:nth-child(3) {
+    background-color: rgba(0,255,239,1);
+}
+
+.colors:nth-child(4) {
+    background-color: rgba(160,32,240,1);
+}
+
+.colors:nth-child(5) {
+    background-color: rgba(255,15,123,1);
+}
+
+.colors:nth-child(6) {
+    background-color: rgba(57,255,20,1);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 95px; 
+}
+ 
+.cube {
+    width: 85px;
+    height: 85px;
+    transform-style: preserve-3d;
+    position: relative;
+    perspective: 200px;
+    transform: rotate3d(0, 1, 0, 0deg) scale3d(1,1,10); 
+    animation: side 3s ease both;
+    animation-timeline: view(x);
+}
+
+.cube::before {
+    position: absolute;
+    content: "";
+    width: 200%;
+    height: 200%;
+    -webkit-box-shadow: inset 0px 0px 44px 0px var(--gradient-shadow) ;
+    -moz-box-shadow: inset 0px 0px 44px 0px var(--gradient-shadow);
+    box-shadow: inset 0px 0px 44px 0px var(--gradient-shadow);
+    top: -50%;
+    left: -50%;
+    border-radius: 25px;
+}
+.cube:nth-child(odd) {
+    margin-bottom: 265px;
+    perspective-origin: center 140px;
+}
+
+.cube:nth-child(even) {
+    margin-top: 135px;
+    perspective-origin: center -40px;
+}
+
+.cube:nth-child(1) #front {
+    background-image: url(cygnet-6260741_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(2) #front {
+    background-image: url(programming-background-with-person-working-with-codes-computer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(3) #front {
+    background-image: url(html-css-collage-concept.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(4) #front {
+    background-image: url(programming-background-with-person-working-with-codes-computer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(5) #front {
+    background-image: url(cygnet-6260741_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(6) #front {
+    background-image: url(fog-8208493_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(7) #front {
+    background-image: url(laughing-kookaburra-6474620_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(8) #front {
+    background-image: url(html-css-collage-concept-with-person.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(9) #front {
+    background-image: url(html-css-collage-concept.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(10) #front {
+    background-image: url(html-css-collage-concept.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(11) #front {
+    background-image: url(fog-8208493_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(12) #front {
+    background-image: url(laughing-kookaburra-6474620_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(13) #front {
+    background-image: url(cygnet-6260741_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(14) #front {
+    background-image: url(programming-background-with-person-working-with-codes-computer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(15) #front {
+    background-image: url(animal-6771900_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(16) #front {
+    background-image: url(laughing-kookaburra-6474620_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(17) #front {
+    background-image: url(fog-8208493_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(18) #front {
+    background-image: url(programming-background-with-person-working-with-codes-computer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(19) #front {
+    background-image: url(laughing-kookaburra-6474620_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cube:nth-child(20) #front {
+    background-image: url(html-css-collage-concept.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes side {
+    0% {
+        transform: rotate3d(0, 1, 0, 15deg) scale3d(1,1,10); 
+    }
+    45% {
+        transform: rotate3d(0, 1, 0, 0deg) scale3d(1,1,10); 
+    }
+    55% {
+        transform: rotate3d(0, 1, 0, 0deg) scale3d(1,1,10); 
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, -8deg) scale3d(1,1,10); 
+    }
+}
+
+.side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(255,255,255);
+    background: var(--gradient);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#front {
+    transform: translateZ(85px);
+    background-color: orange;
+}
+#left {
+    transform-origin: right;
+    transform: rotateY(90deg);
+}
+#right {
+    transform-origin: left;
+    transform: rotateY(-90deg);
+}
+#top {
+    transform-origin: top;
+    transform:rotateX(90deg);
+}
+#bottom {
+    transform-origin: bottom;
+    transform:rotateX(-90deg);
+}
+
+@media (max-width:980px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: fit-content;
+        margin-top: 25vh;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .cube:nth-child(odd) {
+        margin-bottom: 0;
+        perspective-origin: center 0px;
+        margin-right: 60vw ;
+        animation: side-mobile-odd 3s ease both;
+        animation-timeline: view(y);
+    }
+
+    .cube:nth-child(even) {
+        margin-top: 0px;
+        perspective-origin: center 0px;
+        margin-left: 30vw;
+        animation: side-mobile-even 3s ease both;
+        animation-timeline: view(y);
+    }
+
+    .main {
+        gap: 118px;
+    }
+}
+@keyframes side-mobile-even {
+    0% {
+        transform: rotate3d(0, 1, 0, 10deg) scale3d(1,1,9); 
+    }
+    45% {
+        transform: rotate3d(0, 1, 0, 0deg) scale3d(1,1,10); 
+    }
+    55% {
+        transform: rotate3d(0, 1, 0, 0deg) scale3d(1,1,10); 
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, 10deg) scale3d(1,1,9); 
+    }
+}
+
+@keyframes side-mobile-odd {
+    0% {
+        transform: rotate3d(0, 1, 0, -10deg) scale3d(1,1,9); 
+    }
+    45% {
+        transform: rotate3d(0, 1, 0, 0deg) scale3d(1,1,10); 
+    }
+    55% {
+        transform: rotate3d(0, 1, 0, 0deg) scale3d(1,1,10); 
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, -10deg) scale3d(1,1,9); 
+    }
+}
