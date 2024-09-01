@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -46,6 +47,26 @@ body.green {
     --gradient-shadow : rgba(57,255,20,1);
 }
 
+body.yellow {
+    --gradient : linear-gradient(90deg, rgba(255,236,20,0.6) 0%, rgba(255,236,20,0.4) 40%, rgba(255,236,20,0.2) 72%, rgba(255,236,20,0) 100%);
+    --gradient-shadow : rgba(255,236,20,1);
+}
+
+body.multi {
+    --gradient : linear-gradient(90deg, rgba(252,0,166,0.6) 0%, rgba(20,238,255,0.4) 40%, rgba(254,255,20,0.2) 72%, rgba(255,236,20,0) 100%);
+    --gradient-shadow : rgba(255,236,20,1);
+}
+
+body.blue {
+    --gradient : linear-gradient(90deg, rgba(0,39,255,0.6) 0%, rgba(0,39,255,0.4) 40%, rgba(0,39,255,0.2) 72%, rgba(0,39,255,0) 100%);
+    --gradient-shadow : rgba(0,39,255,1);
+}
+
+body.orange {
+    --gradient : linear-gradient(90deg, rgba(255,132,0,0.6) 0%, rgba(255,132,0,0.4) 40%, rgba(255,132,0,0.2) 72%, rgba(255,132,0,0) 100%);
+    --gradient-shadow : rgba(255,132,0,1);
+}
+
 #color_change_container {
     position: fixed;
     top: 20px;
@@ -83,11 +104,12 @@ body.green {
     display: flex;
     width: 0;
     transition: width 0.5s linear;
+    max-width: 50vw;
 }
 
 .color_buttons.active {
     margin: 0 10px;
-    width: calc(35px* 6 - 10px);
+    width: calc(35px* 10 - 10px);
 }
 
 .gear_icon {
@@ -100,30 +122,6 @@ body.green {
     to {
         transform: rotate(360deg);
     }
-}
-
-.colors:nth-child(1) {
-    background-color: rgba(255,255,255,0.4010854341736695);
-}
-
-.colors:nth-child(2) {
-    background-color: rgba(255, 0, 0, 1);
-}
-
-.colors:nth-child(3) {
-    background-color: rgba(0,255,239,1);
-}
-
-.colors:nth-child(4) {
-    background-color: rgba(160,32,240,1);
-}
-
-.colors:nth-child(5) {
-    background-color: rgba(255,15,123,1);
-}
-
-.colors:nth-child(6) {
-    background-color: rgba(57,255,20,1);
 }
 
 .main {
@@ -339,6 +337,7 @@ body.green {
         overflow-x: hidden;
         overflow-y: scroll;
         height: fit-content;
+        justify-content: center;
         margin-top: 25vh;
     }
 
@@ -365,6 +364,15 @@ body.green {
     .main {
         gap: 118px;
     }
+
+    #color_change_container{
+        right: 20px;
+    }
+
+    .color_buttons {
+        flex-wrap: wrap;
+    }
+
 }
 @keyframes side-mobile-even {
     0% {
