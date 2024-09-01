@@ -371,6 +371,7 @@ body.orange {
 
     .color_buttons {
         flex-wrap: wrap;
+        height: 60px;
     }
 
 }
