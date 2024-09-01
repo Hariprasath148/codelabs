@@ -170,12 +170,16 @@
         </div>
     </div>
     <div id="color_change_container">
-        <button class="colors"></button>
-        <button class="colors"></button>
-        <button class="colors"></button>
-        <button class="colors"></button>
-        <button class="colors"></button>
-        <button class="colors"></button>
+        <ion-icon class="gear_icon" name="settings-outline"></ion-icon>
+        <div class="color_buttons">
+            <button class="colors"></button>
+            <button class="colors"></button>
+            <button class="colors"></button>
+            <button class="colors"></button>
+            <button class="colors"></button>
+            <button class="colors"></button>
+        </div>
+        <p>Switch theme</p>
     </div>
     <script>
         let buttons=document.querySelectorAll(".colors");
@@ -198,6 +202,11 @@
         buttons[5].addEventListener("click",()=>{
             body.className = "green";
         });
+        document.querySelector("#color_change_container").addEventListener("click",()=>{
+            document.querySelector(".color_buttons").classList.toggle("active");
+        });
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
