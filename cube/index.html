@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="">
+    <div class="nav_bar">
+        <p class="name">Glass Animation</p>
+        <p class="scroll_para"> <button> << </button> Scroll <button> >> </button> </p>
+        <div id="color_change_container">
+            <ion-icon class="gear_icon" name="settings-outline"></ion-icon>
+            <div class="color_buttons">
+                <button class="colors" data-name="grey" data-bg="#ffffff66"></button>
+                <button class="colors" data-name="red" data-bg="#ff0000"></button>
+                <button class="colors" data-name="skyblue" data-bg="#00ffee"></button>
+                <button class="colors" data-name="purple" data-bg="#a020f0"></button>
+                <button class="colors" data-name="pink" data-bg="#ff0f7b"></button>
+                <button class="colors" data-name="green" data-bg="#39ff14"></button>
+                <button class="colors" data-name="yellow" data-bg="#ffec14"></button>
+                <button class="colors" data-name="multi" data-bg="#14eeff66"></button>
+                <button class="colors" data-name="blue" data-bg="#0027ff"></button>
+                <button class="colors" data-name="orange" data-bg="#ff8400"></button>
+            </div>
+            <p>Switch Color</p>
+        </div>
+    </div>
     <div class="main">
         <div class="cube">
             
@@ -168,22 +188,6 @@
             <div class="side" id="top"></div>
             <div class="side" id="bottom"></div>
         </div>
-    </div>
-    <div id="color_change_container">
-        <ion-icon class="gear_icon" name="settings-outline"></ion-icon>
-        <div class="color_buttons">
-            <button class="colors" data-name="grey" data-bg="#ffffff66"></button>
-            <button class="colors" data-name="red" data-bg="#ff0000"></button>
-            <button class="colors" data-name="skyblue" data-bg="#00ffee"></button>
-            <button class="colors" data-name="purple" data-bg="#a020f0"></button>
-            <button class="colors" data-name="pink" data-bg="#ff0f7b"></button>
-            <button class="colors" data-name="green" data-bg="#39ff14"></button>
-            <button class="colors" data-name="yellow" data-bg="#ffec14"></button>
-            <button class="colors" data-name="multi" data-bg="#14eeff66"></button>
-            <button class="colors" data-name="blue" data-bg="#0027ff"></button>
-            <button class="colors" data-name="orange" data-bg="#ff8400"></button>
-        </div>
-        <p>Switch theme</p>
     </div>
     <script>
         let buttons=document.querySelectorAll(".colors");
