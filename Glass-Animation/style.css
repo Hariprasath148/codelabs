@@ -79,6 +79,7 @@ body.orange {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
+    z-index: 10000;
 }
 
 #color_change_container {
@@ -388,6 +389,7 @@ body.orange {
 }
 
 @media (max-width:980px) {
+
     body{
         overflow-x: hidden;
         overflow-y: scroll;
@@ -420,15 +422,34 @@ body.orange {
         gap: 118px;
     }
 
-    #color_change_container{
-        
+    #color_change_container {
+        font-size: 16px;
     }
 
     .color_buttons {
-        flex-wrap: wrap;
-        height: 60px;
+        align-items: center;
     }
 
+    .colors {
+        height: 16px;
+        width: 16px;
+    }
+
+    .scroll_para {
+        display: none;
+    }
+
+    .nav_bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #btn-forward , #btn-backward {
+        display: none;
+    }
 }
 @keyframes side-mobile-even {
     0% {
